@@ -5,11 +5,11 @@ import { Component } from "react";
 import User from "./User";
 import classes from "./Users.module.css";
 
-const DUMMY_USERS = [
-  { id: "u1", name: "Dave" },
-  { id: "u2", name: "Kat" },
-  { id: "u3", name: "Rebecca" },
-];
+// const DUMMY_USERS = [
+//   { id: "u1", name: "Dave" },
+//   { id: "u2", name: "Kat" },
+//   { id: "u3", name: "Rebecca" },
+// ];
 
 class Users extends Component {
   constructor() {
@@ -33,7 +33,7 @@ class Users extends Component {
   render() {
     const usersList = (
       <ul>
-        {DUMMY_USERS.map((user) => (
+        {this.props.users.map((user) => ( /*changed to this.props*/
           <User key={user.id} name={user.name} />
         ))}
       </ul>
